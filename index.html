@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="K. Kaarthik's responsive portfolio, notes app, and product explorer built for ApexPlanet Internship Task 4.">
+  <title>KK Studio | ApexPlanet Task 4</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="KK Studio home"><span class="brand-mark">K</span><span>KK<span class="brand-muted">.STUDIO</span></span></a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a class="nav-link active" href="#home">Overview</a>
+      <a class="nav-link" href="#portfolio">Portfolio</a>
+      <a class="nav-link" href="#notes">Notes App</a>
+      <a class="nav-link" href="#products">Products</a>
+    </nav>
+    <a class="top-cta" href="#contact">Let's connect <span>↗</span></a>
+  </header>
+
+  <main>
+    <section class="hero section-shell" id="home">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="status-dot"></span> APEXPLANET · TASK 04</div>
+        <h1>Ideas into <span class="gradient-text">interactive</span><br>experiences.</h1>
+        <p class="hero-subtitle">A responsive web experience combining a personal portfolio, a local-storage notes app, and a filterable product explorer — built with HTML, CSS, and JavaScript.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#portfolio">Explore the project <span>↓</span></a>
+          <a class="button button-quiet" href="#products">Browse products <span>↗</span></a>
+        </div>
+        <div class="hero-stats">
+          <div><strong>03</strong><span>Integrated modules</span></div>
+          <div><strong>100%</strong><span>Responsive layout</span></div>
+          <div><strong>Local</strong><span>Notes persistence</span></div>
+        </div>
+      </div>
+      <div class="hero-visual" aria-label="Project feature overview">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="core-card">
+          <div class="core-top"><span class="mini-label">PROJECT SYSTEM</span><span class="live-pill"><span></span> LIVE</span></div>
+          <div class="core-symbol">✳</div>
+          <h2>Build. Save. Discover.</h2>
+          <p>Three practical front-end features in one clean interface.</p>
+          <div class="feature-line"><span class="feature-icon">⌘</span><span>Portfolio</span><span class="feature-state">Ready</span></div>
+          <div class="feature-line"><span class="feature-icon">▤</span><span>Notes storage</span><span class="feature-state">Enabled</span></div>
+          <div class="feature-line"><span class="feature-icon">◇</span><span>Product filters</span><span class="feature-state">Enabled</span></div>
+        </div>
+        <div class="floating-chip chip-top">✦ &nbsp; Responsive UI</div>
+        <div class="floating-chip chip-bottom">◉ &nbsp; Built with JavaScript</div>
+      </div>
+    </section>
+
+    <section class="section-shell section-block" id="portfolio">
+      <div class="section-heading">
+        <div><div class="eyebrow">01 / PERSONAL PORTFOLIO</div><h2>A little about <span class="gradient-text">me.</span></h2></div>
+        <p>A simple professional profile with projects, skills, and a contact form.</p>
+      </div>
+      <div class="portfolio-grid">
+        <article class="panel profile-panel">
+          <div class="profile-avatar">KK</div>
+          <div class="profile-label">COMPUTER SCIENCE · STUDENT</div>
+          <h3>K. Kaarthik</h3>
+          <p class="muted">Aspiring AI and web developer who enjoys turning ideas into useful digital experiences.</p>
+          <div class="tag-row"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">Python</span></div>
+          <a class="text-link" href="https://github.com/kkaarthik0701-cmyk" target="_blank" rel="noopener noreferrer">View GitHub profile <span>↗</span></a>
+        </article>
+        <article class="panel projects-panel">
+          <div class="panel-topline"><span class="eyebrow">SELECTED WORK</span><span class="tiny-count">03 PROJECTS</span></div>
+          <div class="project-item"><span class="project-number">01</span><div><h3>Responsive Portfolio</h3><p>Personal introduction, project showcase, and contact form.</p></div><span class="project-arrow">↗</span></div>
+          <div class="project-item"><span class="project-number">02</span><div><h3>Notes Workspace</h3><p>Create, search, and delete notes saved in localStorage.</p></div><span class="project-arrow">↗</span></div>
+          <div class="project-item"><span class="project-number">03</span><div><h3>Product Explorer</h3><p>Filter by category and price, then sort by rating or price.</p></div><span class="project-arrow">↗</span></div>
+        </article>
+      </div>
+      <div class="contact-strip panel" id="contact">
+        <div><div class="eyebrow">LET'S CONNECT</div><h3>Have a project in mind?</h3><p class="muted">Use the form to test client-side validation.</p></div>
+        <form id="contactForm" class="contact-form">
+          <label class="sr-only" for="contactName">Your name</label><input id="contactName" name="name" type="text" placeholder="Your name" required>
+          <label class="sr-only" for="contactEmail">Your email</label><input id="contactEmail" name="email" type="email" placeholder="Email address" required>
+          <button class="button button-primary" type="submit">Send message <span>↗</span></button>
+          <p id="contactStatus" class="form-status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <section class="section-shell section-block" id="notes">
+      <div class="section-heading">
+        <div><div class="eyebrow">02 / LOCAL-STORAGE NOTES APP</div><h2>Your thoughts, <span class="gradient-text">kept safe.</span></h2></div>
+        <p>Add a note, search your notes, or delete one. Notes remain after a page refresh in this browser.</p>
+      </div>
+      <div class="notes-layout">
+        <form id="noteForm" class="panel note-composer">
+          <div class="panel-topline"><span class="eyebrow">NEW NOTE</span><span class="composer-icon">＋</span></div>
+          <label for="noteTitle">Title</label>
+          <input id="noteTitle" type="text" maxlength="70" placeholder="e.g. Project ideas" required>
+          <label for="noteBody">Your note</label>
+          <textarea id="noteBody" rows="5" maxlength="1200" placeholder="Write something worth remembering..." required></textarea>
+          <button class="button button-primary full-width" type="submit">Save note <span>＋</span></button>
+          <p class="small-note">Saved in this browser using localStorage.</p>
+        </form>
+        <div class="notes-content">
+          <div class="notes-toolbar"><div><h3>My notes <span id="noteCount" class="count-pill">0</span></h3><p class="muted">Your personal mini workspace</p></div><input id="noteSearch" class="search-input" type="search" placeholder="Search notes..." aria-label="Search notes"></div>
+          <div id="notesList" class="notes-grid"></div>
+          <div id="notesEmpty" class="empty-state"><span>▤</span><h3>No notes yet</h3><p>Create your first note using the form.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-shell section-block" id="products">
+      <div class="section-heading">
+        <div><div class="eyebrow">03 / PRODUCT LISTING</div><h2>Find your next <span class="gradient-text">favourite.</span></h2></div>
+        <p>A sample catalog with working category and price filters plus sorting controls.</p>
+      </div>
+      <div class="product-toolbar panel">
+        <div class="filter-group"><label for="categoryFilter">Category</label><select id="categoryFilter"><option value="all">All categories</option><option value="Audio">Audio</option><option value="Workspace">Workspace</option><option value="Accessories">Accessories</option></select></div>
+        <div class="filter-group price-filter"><label for="priceFilter">Maximum price <strong id="priceValue">₹10,000</strong></label><input id="priceFilter" type="range" min="500" max="10000" step="500" value="10000"></div>
+        <div class="filter-group"><label for="sortFilter">Sort by</label><select id="sortFilter"><option value="featured">Featured</option><option value="rating-desc">Highest rating</option><option value="price-asc">Price: low to high</option><option value="price-desc">Price: high to low</option></select></div>
+        <button id="resetFilters" class="button button-quiet reset-button" type="button">Reset filters ↺</button>
+      </div>
+      <div class="product-results-line"><span id="productCount">Showing 6 products</span><span class="muted">Demo catalog · INR</span></div>
+      <div id="productGrid" class="product-grid"></div>
+      <div id="productsEmpty" class="empty-state"><span>⌕</span><h3>No matching products</h3><p>Try increasing the maximum price or choosing another category.</p></div>
+    </section>
+  </main>
+
+  <footer class="footer section-shell"><a class="brand" href="#home"><span class="brand-mark">K</span><span>KK<span class="brand-muted">.STUDIO</span></span></a><p>Built with HTML, CSS & JavaScript · ApexPlanet Internship Task 4</p><a href="#home" class="back-top">Back to top ↑</a></footer>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
